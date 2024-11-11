@@ -1,25 +1,47 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import logo from './flama.png';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="Aplicacion">
+        <div className="contenedor-login">
+          <div className="contenedor-logo">
+            <img src={logo} alt="Logo" className="logo" />
+          </div>
+          <h1 className="nombre-aplicacion">APP_NAME</h1>
+          <div className="formulario-login">
+            <div className="usuario">
+              <label>Usuario:</label>
+              <input type="text" placeholder="Ingrese su usuario" />
+            </div>
+            <div className='password'>
+              <label>Contraseña:</label>
+              <input type="password" placeholder="Ingrese su contraseña" />
+            </div>
+          </div>
+          <div>
+            <button className="boton-ingresar">INGRESAR</button>
+          </div>
+
+          <div className="contenedor-crear-cuenta">
+            <p>¿No tiene una cuenta?</p> 
+            <a href="/register">Cree una cuenta</a>
+          </div>
+          <footer className="pie-de-pagina">
+            Derechos Reservados (C) - 2024-2025
+          </footer>
+          
+        </div>
+        <div className="contenedor-imagen">
+          <img src="https://www.camaraofespanola.org/files/Afiliados/Images/Duragas.jpg" alt="Imagen de fondo" />
+        </div>
+        
+
+      </div>
+    );
+  }
 }
 
 export default App;
